@@ -3,11 +3,9 @@
     <app-banner></app-banner>
   </div>
   <div class="chair-body">
-    <app-chair-image [chair-name]="'Aeron'" [image-url]="'assets/aeron.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
-    <app-chair-image [chair-name]="'Cosm'" [image-url]="'assets/cosm.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
-    <app-chair-image [chair-name]="'Embody'" [image-url]="'assets/embody.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
-    <app-chair-image [chair-name]="'Mirra 2'" [image-url]="'assets/mirra2.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
-    <app-chair-image [chair-name]="'Celle'" [image-url]="'assets/celle.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
+    <div *ngFor="let chair of chairs">
+      <app-chair-image [chair-name]="chair.name" [image-url]="chair.imageUrl" (chair-click)="selectChair($event)"></app-chair-image>  
+    </div>
     <div class="break"></div>
     <div class="chair-selection" *ngIf="selectedChair">
       You selected {{ selectedChair }}
