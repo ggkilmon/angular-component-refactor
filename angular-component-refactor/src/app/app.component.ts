@@ -10,6 +10,7 @@ export class AppComponent {
   selectedChair: string = "";
 
   selectChair(chair: string){
+    console.log(chair);
     this.selectedChair = chair;
   }
 }

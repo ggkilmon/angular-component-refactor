@@ -4,26 +4,11 @@
     <h2>Chairs</h2>
   </div>
   <div class="chair-body">
-    <div class="chair-image" (click)="selectChair('Aeron')">
-      <img src="assets/aeron.jpg" alt="Aeron" />
-      <div class="chair-name">Aeron</div>
-    </div>
-    <div class="chair-image" (click)="selectChair('Cosm')">
-      <img src="assets/cosm.jpg" alt="Cosm" />
-      <div class="chair-name">Cosm</div>
-    </div>
-    <div class="chair-image" (click)="selectChair('Embody')">
-      <img src="assets/embody.jpg" alt="Embody" />
-      <div class="chair-name">Embody</div>
-    </div>
-    <div class="chair-image" (click)="selectChair('Mirra 2')">
-      <img src="assets/mirra2.jpg" alt="Mirra 2" />
-      <div class="chair-name">Mirra 2</div>
-    </div>
-    <div class="chair-image" (click)="selectChair('Celle')">
-      <img src="assets/celle.jpg" alt="Celle" />
-      <div class="chair-name">Celle</div>
-    </div>
+    <app-chair-image [chair-name]="'Aeron'" [image-url]="'assets/aeron.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
+    <app-chair-image [chair-name]="'Cosm'" [image-url]="'assets/cosm.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
+    <app-chair-image [chair-name]="'Embody'" [image-url]="'assets/embody.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
+    <app-chair-image [chair-name]="'Mirra 2'" [image-url]="'assets/mirra2.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
+    <app-chair-image [chair-name]="'Celle'" [image-url]="'assets/celle.jpg'" (chair-click)="selectChair($event)"></app-chair-image>
     <div class="break"></div>
     <div class="chair-selection" *ngIf="selectedChair">
       You selected {{ selectedChair }}
